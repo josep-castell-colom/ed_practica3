@@ -159,7 +159,7 @@ git push -u origin main
 
 ---
 
-¹ Como hemos mencionado anteriormente las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
+¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
 
 ```
 git push origin <nombre_etiqueta>
@@ -186,6 +186,8 @@ Si hemos usado el comando `git push` con la opción `-u`, el comando anterior se
 ```
 git pull origin
 ```
+
+Cabe destacar que la acción _pull_ puede desencadenar conflictos si se han editado las mismas líneas de código. En este caso se nos enseñarán las diferencias y se nos pedirá que elijamos la versión definitiva para que prevalezca sobre la otra.
 
 ## Nuevas ramas y actualizaciones
 
