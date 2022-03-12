@@ -162,7 +162,7 @@ Si a este comando le añadimos una cadena de caracteres creará una nueva rama c
 git branch dev
 ```
 
-# _Checkout_
+### _Checkout_
 
 Una vez creada usaremos el siguiente comando para movernos entre las diferentes ramas:
 
