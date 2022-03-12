@@ -59,3 +59,23 @@ git add Persona.java
 ```
 
 Ahora que tenemos los archivos en _stage_ podemos hacer el primer **commit**.
+
+Cada _commit_ que hacemos es un punto concreto de nuestro proyecto en el que se guarda una especie de instantánea a la que podemos regresar en un futuro, ver los cambios que se llevaron a cabo e incluso saber quién los hizo y por qué.
+
+Para facilitar ésta información es recomendable incluir un pequeño mensaje en cada _commit_ explicando breve y concisamente los cambios que hemos hecho y por qué.
+
+- Para hacer un commit se puede usar el siguiente comando:
+
+```
+git commit
+```
+
+El cual nos abrirá un editor de texto donde aparecen los archivos que se han modificado y donde debemos incluir el mensaje explicativo, guardar el archivo y salir.
+
+También podemos hacer uso de la opción -m para atajar el paso del editor. De modo que el comando quedaría así:
+
+```
+git commit -m '<mensaje explicativo>'
+```
+
+Dónde \<mensaje explicativo\> sería la descripción, sin incluir los símbolos mayor que (>) ni menor que (<).
