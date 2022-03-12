@@ -168,8 +168,8 @@ La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cad
 > ```
 > git push origin --tags
 > ```
-
-para incluir todas las etiquetas creadas localmente.
+> 
+> para incluir todas las etiquetas creadas localmente.
 
 ### Pull
 
