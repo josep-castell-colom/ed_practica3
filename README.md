@@ -2,6 +2,15 @@
 
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para manejar un control de versiones.</p>
 
+#### Inicializar repositorio y subir archivos
+- [Inicializar repositorio](#inicializar-repositorio)
+- [_Untracked_, _staged_ y _commit_](#untracked-staged-y-commit)
+- [Etiquetas (_tag_)](#etiquetas-tag)
+- [_Push_](#push)
+- [_Pull_](#pull)
+
+#### Nuevas ramas y actualizaciones
+
 ## Inicializar repositorio y subir archivos
 ### Inicializar repositorio
 
@@ -33,7 +42,7 @@ git remote add origin https://github.com/josep-castell-colom/ed_practica3.git
 
 Ahora que tenemos vinculado nuestro repositorio local con el repositorio remoto ya estamos listos para subir los archivos.
 
-### _Untracked_, _stage_ y _commit_
+### _Untracked_, _staged_ y _commit_
 En este punto es interesante conocer los tres estadios por los que pasarán nuestros archivos antes de ser subidos al repositorio remoto. Podemos ir comprobando el estado de los archivos con el comando:
 
 ```
@@ -42,11 +51,11 @@ git status
 
 Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 
-··· 1. En primer lugar, los archivos que hayan sido modificados se mostraran de color rojo en el apartado de archivos sin seguimiento(_untracked_).
+1. En primer lugar, los archivos que hayan sido modificados se mostraran de color rojo en el apartado de archivos sin seguimiento(_untracked_).
 
-··· 2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
+2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
 
-··· 3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
+3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
 
 - Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
 
@@ -74,7 +83,7 @@ git commit
 
 El cual nos abrirá un editor de texto donde aparecen los archivos que se han modificado y donde debemos incluir el mensaje explicativo, guardar el archivo y salir.
 
-También podemos hacer uso de la opción -m para atajar el paso del editor. De modo que el comando quedaría así:
+También podemos hacer uso de la opción `-m` para atajar el paso del editor. De modo que el comando quedaría así:
 
 ```
 git commit -m '<mensaje explicativo>'
@@ -82,13 +91,13 @@ git commit -m '<mensaje explicativo>'
 
 Donde \<mensaje explicativo\> sería la descripción, sin incluir los símbolos menor que (<) ni mayor que (>).
 
-También es posible realizar los pasos de _stage_ y _commit_ en uno sólo usando la opción -a del comando _commit_. De este modo el comando quedaría así:
+También es posible realizar los pasos de _stage_ y _commit_ en uno sólo usando la opción `-a` del comando _commit_. De este modo el comando quedaría así:
 
 ```
 git commit -a -m '<mensaje explicativo>'
 ```
 
-En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción -a añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
+En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción `-a` añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
 Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir cambios no deseados al proyecto.
 
 ### Etiquetas (_tag_)
@@ -116,4 +125,20 @@ git push -u origin main
 ```
 
 En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
-La opción -u nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar _git push_ y _git pull_ sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
+La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
+
+### Pull
+
+- Así como `git push` nos sirve para actualizar el repositorio remoto con el repositorio local, para realizar la acción inversa e incluir en el repositorio local los cambios efectuados en el remoto usaremos el comando:
+
+```
+git pull
+```
+
+Si hemos usado el comando `git push` con la opción `-u`, el comando anterior será suficiente; si no es así, debemos añadir el repositorio remoto:
+
+```
+git pull origin
+```
+
+## Nuevas ramas y actualizaciones
