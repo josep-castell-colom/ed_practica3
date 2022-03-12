@@ -44,13 +44,4 @@ public class Gato extends Mascota{
       return info;
     }
 
-    /**
-     * Implementa el método sonido() de la interfaz Sonido.
-     */
-    @Override
-    public void sonido(){
-        System.out.println("Miaaaau");
-    }
-
-    
 }

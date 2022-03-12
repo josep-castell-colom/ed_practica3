@@ -4,7 +4,7 @@ import java.sql.Date;
 /**
  * La clase Barco implementa la interfaz Sonido y necesita un objeto de tipo Motor.
  */
-public class Barco implements Sonido {
+public class Barco {
   private String nombre;
   private Date fechaConstruccion;
   private int numCamarotes;
@@ -102,13 +102,5 @@ public class Barco implements Sonido {
     "\nFECHA DE CONSTRUCCIÓN: " + fechaConstruccion +
     "\nNº DE CAMAROTES: " + numCamarotes +
     "\nMOTOR: " + motor;
-  }
-
-  /**
-   * Implementa el método sonido() de la interfaz Sonido.
-   */
-  @Override
-  public void sonido(){
-    System.out.println("Brrrrrrrrrrrrrrrrrrrr......");
   }
 }
