@@ -1,35 +1,52 @@
-// Indicamos el nombre del paquete
 package Practica3;
 
-// Creamos la clase Gato, subclase de Mascota
+/**
+ * La clase Gato es hija de la clase Mascota.
+ */
 public class Gato extends Mascota{
     private String raza;
     
-    // Creamos los constructores; vacío y con todos los atributos
+    /**
+     * Crea un gato con todos sus atributos por defecto.
+     */
     public Gato(){};
     
+    /**
+     * Crea un gato al que le pasan todos sus atributos por parámetro, incluso los de su clase madre.
+     * @param raza Raza del gato.
+     * @param nombre Nombre del gato.
+     * @param edad Edad del gato.
+     */
     public Gato(String raza, String nombre, int edad){
        super(nombre, edad);   // Usamos super para acceder al constructor de la superclase
        this.raza =raza;
    }
 
-    // Creamos los getters y setters de la subclase
+    /**
+     * Devuelve la raza del gato.
+     * @return Raza del gato.
+     */
     public String getRaza() {
         return raza;
     }
 
+    /**
+     * Asigna al gato la raza que le pasan por parámetro.
+     * @param raza Nueva raza del gato.
+     */
     public void setRaza(String raza) {
         this.raza = raza;
     }
     
-    // Sobreescribimos el método toString()
     @Override 
     public String toString(){
       String info="El nombre del gato es "+ this.getNombre() +" y su edad es de "+ this.getEdad() + " años. La raza del gato es "+raza;
       return info;
     }
 
-    // Sobreescribimos el método sonido() implementado de la interfaz Sonido
+    /**
+     * Implementa el método sonido() de la interfaz Sonido.
+     */
     @Override
     public void sonido(){
         System.out.println("Miaaaau");

@@ -1,28 +1,41 @@
-// Indicamos el nombre del paquete
 package Practica3;
 
 // Creamos la clase Perro, subclase de Mascota
 public class Perro extends Mascota{
   private String raza;
   
-  // Creamos los constructores; vacío y con todos los atributos
+  /**
+   * Crea un perro con los valores de los atributos por defecto.
+   */
   public Perro(){};
   
+  /**
+   * Crea un perro pasándole sus atributos y los de su clase madre.
+   * @param raza Raza del perro.
+   * @param nombre Nombre del perro.
+   * @param edad Edad del perro.
+   */
   public Perro(String raza, String nombre, int edad){
-      super(nombre, edad);   // Usamos super para acceder al constructor de la superclase
+      super(nombre, edad);
       this.raza =raza;    
   }
 
-  // Creamos los getters y setters de la subclase
+  /**
+   * Devuelve la raza del perro.
+   * @return Raza del perro.
+   */
   public String getRaza() {
       return raza;
   }
 
+  /**
+   * Asigna la raza que se le pasa por parámetro.
+   * @param raza Nueva raza del pero.
+   */
   public void setRaza(String raza) {
       this.raza = raza;
   }
   
-  // Sobreescribimos el método toString()
   @Override 
   public String toString(){
       String info="El nombre del perro es " + this.getNombre() + " y su edad es de" + this.getEdad() + " años. La raza del perro es " + raza;

@@ -1,9 +1,13 @@
-// Indicamos el nombre del paquete
 package Practica3;
 
-// Creamos la interfaz Sonido
+/**
+ * Interfaz que será implementada por Motor y Mascota
+ */
 public interface Sonido {
-  // Creamos el método sonido() sin implementar
+  
+  /**
+   * Método sonido, sin implementar.
+   */
   public abstract void sonido();
 }
 
