@@ -3,6 +3,7 @@
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para manejar un control de versiones.</p>
 
 #### Inicializar repositorio y subir archivos
+
 - [Inicializar repositorio](#inicializar-repositorio)
 - [_Untracked_, _staged_ y _commit_](#untracked-staged-y-commit)
 - [Etiquetas (_tag_)](#etiquetas-tag)
@@ -10,29 +11,31 @@
 - [_Pull_](#pull)
 
 #### Nuevas ramas y actualizaciones
+
 - [_Branch_](#branch)
 - [_Checkout_](#checkout)
 
 ## Inicializar repositorio y subir archivos
+
 ### Inicializar repositorio
 
 Para empezar debemos inicializar un nuevo repositorio en nuestra carpeta local dónde se encuentra la Práctica 3.
-  Para ello nos situamos en el directorio mencionado y usamos el comando:
+Para ello nos situamos en el directorio mencionado y usamos el comando:
 
 ```
 git init
 ```
 
 A continuación podemos añadir los archivos **README.md** y **.gitignore**.
-  Creamos los archivos dentro del directorio usando, por ejemplo:
+Creamos los archivos dentro del directorio usando, por ejemplo:
 
 ```
 touch README.md
 touch .gitignore
 ```
 
-> El archivo **README.md** nos servirá para editar el presente texto en formato Markdown; donde iremos comentando el proceso que hemos seguido.
-> El archivo **.gitignore** es un archivo en el que añadiremos los archivos que no queremos que sean rastreados por Git. En nuestro caso, hemos añadido el archivo en formato PDF de la Práctica 3, ya que no tiene relevancia en el código.
+> El archivo **README.md** nos servirá para editar el presente texto en formato Markdown; donde iremos comentando el proceso que hemos seguido. <br />
+> El archivo **.gitignore** es un archivo en el que añadiremos los nombres de los archivos que no queremos que sean rastreados por Git. En nuestro caso, hemos añadido el archivo en formato PDF de la Práctica 3, ya que no tiene relevancia en el código.
 
 El siguiente paso es iniciar el repositorio remoto. Para llevar a cabo este paso nos dirigimos a la página web de [GitHub](https://github.com) y creamos un nuevo repositorio, el cual hemos llamado 'ed_practica3' ya que contendrá el código de la Práctica 3.
 
@@ -45,6 +48,7 @@ git remote add origin https://github.com/josep-castell-colom/ed_practica3.git
 Ahora que tenemos vinculado nuestro repositorio local con el repositorio remoto ya estamos listos para subir los archivos.
 
 ### _Untracked_, _staged_ y _commit_
+
 En este punto es interesante conocer los tres estadios por los que pasarán nuestros archivos antes de ser subidos al repositorio remoto. Podemos ir comprobando el estado de los archivos con el comando:
 
 ```
@@ -60,6 +64,7 @@ Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
 
 #### _Staged_ (`git add`)
+
 Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
 
 ```
@@ -107,7 +112,7 @@ Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir
 
 #### _Log_
 
-Como hemos comentado al inicio de la sección cada _commit_ realiza una instantánea de los archivos en ese momento concreto. Para ver el historial de _commits_ podemos usar el comando:
+Como hemos comentado al inicio de la sección, cada _commit_ realiza una instantánea de los archivos en ese momento concreto. Para ver el historial de _commits_ podemos usar el comando:
 
 ```
 git log
@@ -123,7 +128,7 @@ git log --pretty=oneline
 
 ### Etiquetas (_tag_)
 
-Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_). 
+Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_).
 Es bueno conocer que hay dos tipos de etiquetas: la etiqueta ligera (_lightweight_) y la etiqueta anotada (_annotated_). La primera nos permite crear una etiqueta rápida, simplemente incluyendo su nombre:
 
 ```
@@ -158,17 +163,17 @@ En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a
 La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
 
 > ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
-> 
+>
 > ```
 > git push origin <nombre_etiqueta>
 > ```
-> 
+>
 > para incluir una etiqueta en concreto o
-> 
+>
 > ```
 > git push origin --tags
 > ```
-> 
+>
 > para incluir todas las etiquetas creadas localmente.
 
 ### Pull
@@ -228,7 +233,7 @@ Si queremos actualizar nuestra rama en el repositorio remoto debemos repetir los
 
 Al tener una nueva versión estable en la rama de desarrollo es hora de fusionarla con la rama principal.
 
-Para llevar esto a cabo debemos situarnos en la rama principal (usado `git checkout main`) y desde esta rama llamar al comando: 
+Para llevar esto a cabo debemos situarnos en la rama principal (usado `git checkout main`) y desde esta rama llamar al comando:
 
 ```
 git merge dev

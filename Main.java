@@ -6,5 +6,6 @@ public class Main {
     Juguete oso = new Juguete("Oso", 5, 3);
     nin.comprarJuguete(oso);
     System.out.println(nin);
+
   }
 }
