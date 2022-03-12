@@ -10,6 +10,8 @@
 - [_Pull_](#pull)
 
 #### Nuevas ramas y actualizaciones
+- [_Branch_](#branch)
+- [_Checkout_](#checkout)
 
 ## Inicializar repositorio y subir archivos
 ### Inicializar repositorio
@@ -143,6 +145,8 @@ git pull origin
 
 ## Nuevas ramas y actualizaciones
 
+### _Branch_
+
 En relación a las ramas (_branch_) hay una serie de comandos que debemos conocer.
 En primer lugar:
 
@@ -158,10 +162,14 @@ Si a este comando le añadimos una cadena de caracteres creará una nueva rama c
 git branch dev
 ```
 
+# _Checkout_
+
 Una vez creada usaremos el siguiente comando para movernos entre las diferentes ramas:
 
 ```
 git checkout <rama>
 ```
 
-En este momento los cambios que efectuemos en nuestro código quedaran registrados en la nueva rama sin modificar la rama principal (_main_).
+En este momento los cambios que efectuemos en nuestro código quedaran registrados en la nueva rama, sin modificar la rama principal (_main_).
+
+Si queremos actualizar nuestra rama en el repositorio remoto debemos repetir los pasos [_stage_ y _ commit_](#untracked-staged-y-commit) después de haber realizado los cambios pertinentes.
