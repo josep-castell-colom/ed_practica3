@@ -42,11 +42,11 @@ git status
 
 Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 
-1. En primer lugar, los archivos que hayan sido modificados se mostraran de color rojo en el apartado de archivos sin seguimiento(_untracked_).
+··· 1. En primer lugar, los archivos que hayan sido modificados se mostraran de color rojo en el apartado de archivos sin seguimiento(_untracked_).
 
-2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
+··· 2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
 
-3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando _git status_ no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
+··· 3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
 
 - Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
 
@@ -115,5 +115,5 @@ git tag -a v1.0 -m 'Versión 1.0 del proyecto'
 git push -u origin main
 ```
 
-En este comando _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
+En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
 La opción -u nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar _git push_ y _git pull_ sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
