@@ -2,7 +2,8 @@
 
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para manejar un control de versiones.</p>
 
-## Inicializar repositorio y subir los archivos
+## Inicializar repositorio y subir archivos
+### Inicializar repositorio
 
 - Para empezar debemos inicializar un nuevo repositorio en nuestra carpeta local dónde se encuentra la Práctica 3.
   Para ello nos situamos en el directorio mencionado y usamos el comando:
@@ -32,6 +33,7 @@ git remote add origin https://github.com/josep-castell-colom/ed_practica3.git
 
 Ahora que tenemos vinculado nuestro repositorio local con el repositorio remoto ya estamos listos para subir los archivos.
 
+### _Untracked_, _stage_ y _commit_
 En este punto es interesante conocer los tres estadios por los que pasarán nuestros archivos antes de ser subidos al repositorio remoto. Podemos ir comprobando el estado de los archivos con el comando:
 
 ```
@@ -78,4 +80,40 @@ También podemos hacer uso de la opción -m para atajar el paso del editor. De m
 git commit -m '<mensaje explicativo>'
 ```
 
-Dónde \<mensaje explicativo\> sería la descripción, sin incluir los símbolos mayor que (>) ni menor que (<).
+Donde \<mensaje explicativo\> sería la descripción, sin incluir los símbolos menor que (<) ni mayor que (>).
+
+También es posible realizar los pasos de _stage_ y _commit_ en uno sólo usando la opción -a del comando _commit_. De este modo el comando quedaría así:
+
+```
+git commit -a -m '<mensaje explicativo>'
+```
+
+En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción -a añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
+Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir cambios no deseados al proyecto.
+
+### Etiquetas (_tag_)
+
+Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_). 
+Es bueno conocer que hay dos tipos de etiquetas: la etiqueta ligera (_lightweight_) y la etiqueta anotada (_annotated_). La primera nos permite crear una etiqueta rápida, simplemente incluyendo su nombre:
+
+```
+git tag v1.0
+```
+
+La etiqueta anotada es un objeto que contiene, entre otras cosas, su nombre, el nombre del autor, la fecha y la descripción. Es recomendable usar las etiquetas anotadas para un mejor seguimiento del proyecto.
+La sintaxis para este tipo de etiquetas es:
+
+```
+git tag -a v1.0 -m 'Versión 1.0 del proyecto'
+```
+
+### _Push_
+
+- Una vez hecho el _commit_ y añadida la etiqueta ya sólo nos falta subir los archivos. Para ello usaremos el comando:
+
+```
+git push -u origin main
+```
+
+En este comando _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
+La opción -u nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar _git push_ y _git pull_ sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
