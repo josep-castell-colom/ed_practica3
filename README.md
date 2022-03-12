@@ -59,6 +59,7 @@ Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 
 3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
 
+#### _Staged_ (`git add`)
 Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
 
 ```
@@ -72,6 +73,8 @@ git add Persona.java
 ```
 
 Ahora que tenemos los archivos en _stage_ podemos hacer el primer **commit**.
+
+#### _Commit_
 
 Cada _commit_ que hacemos es un punto concreto de nuestro proyecto en el que se guarda una especie de instantánea a la que podemos regresar en un futuro, ver los cambios que se llevaron a cabo e incluso saber quién los hizo y por qué.
 
@@ -102,6 +105,22 @@ git commit -a -m '<mensaje explicativo>'
 En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción `-a` añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
 Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir cambios no deseados al proyecto.
 
+#### _Log_
+
+Como hemos comentado al inicio de la sección cada _commit_ realiza una instantánea de los archivos en ese momento concreto. Para ver el historial de _commits_ podemos usar el comando:
+
+```
+git log
+```
+
+Que nos mostrará el _hash_ del _commit_, la etiqueta (si dispone de una), el nombre del autor, la fecha y el mensaje que hemos incluido al realizar el _commit_.
+
+Si no necesitamos tanta información y queremos ver el historial de forma resumida podemos usar:
+
+```
+git log --pretty=oneline
+```
+
 ### Etiquetas (_tag_)
 
 Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_). 
@@ -116,6 +135,13 @@ La sintaxis para este tipo de etiquetas es:
 
 ```
 git tag -a v1.0 -m 'Versión 1.0 del proyecto'
+```
+
+Las etiquetas hacen referencia a un _commit_ en concreto por lo que si ejecutamos los dos comandos anteriores se aplicará la etiqueta al _head_, es decir, al _commit_ más reciente; a la cabeza del proyecto.
+Si necesitamos añadir una etiqueta a un _commit_ anterior tendremos que buscar su _hash_ con el comando visto anteriormente [`git log`](#log) e incluirlo después del nombre de la versión:
+
+```
+git tag -a v1.0 <commit_hash> -m '<mensaje_explicativo>
 ```
 
 ### _Push_
