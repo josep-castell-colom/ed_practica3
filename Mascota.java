@@ -3,7 +3,7 @@ package Practica3;
 /**
  * Clase Mascota, de la que parten Perro y Gato e implementa la interfaz Sonido.
  */
-public abstract class Mascota {
+public abstract class Mascota implements Sonido {
     private String nombre;
     private int edad;
 

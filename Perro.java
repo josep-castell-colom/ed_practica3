@@ -42,4 +42,11 @@ public class Perro extends Mascota{
       return info;
   }
 
+  /**
+   * Implementa el método sonido() de la interfaz Sonido.
+   */
+  @Override
+  public void sonido(){
+      System.out.println("Guau guau!");
+  }
 }

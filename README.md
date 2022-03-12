@@ -252,4 +252,4 @@ Lo primero que hemos hecho ha sido usar la rama _dev_ para actualizar los coment
 En segundo lugar, hemos eliminado directamente la interfaz Sonido de la rama _main_ y hemos corregido los errores que ésto nos ha generado.
 Una vez corregidos los errores y teniendo una versión estable, hemos realizado el _commit_ y el _push_ y le hemos asignado la etiqueta de versión 2.0.0, pues el cambio que hemos realizado no era compatible con la anterior versión.
 
-Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y hemos añadido de nuevo la interfaz Sonido.
+Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y hemos añadido de nuevo la interfaz Sonido y hemos implementado el método sonido en las clases Motor y Mascota, y por herencia en las clases Gato y Perro.

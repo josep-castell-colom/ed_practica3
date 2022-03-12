@@ -3,7 +3,7 @@ package Practica3;
 /**
  * Un motor es una pieza indispensable para la clase Barco.
  */
-public class Motor {
+public class Motor implements Sonido {
   private String fabricante;
   private String potencia;
   private int codigo;
@@ -81,5 +81,13 @@ public class Motor {
     "CÓDIGO: " + this.codigo;
 
     return info;
+  }
+
+  /**
+   * Implementa el método sonido() de la interfaz Sonido con el sonido del motor.
+   */
+  @Override
+  public void sonido(){
+    System.out.println("Bbrrrrr....");
   }
 }
