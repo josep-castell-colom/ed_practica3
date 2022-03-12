@@ -31,8 +31,8 @@ touch README.md
 touch .gitignore
 ```
 
-> El archivo **README.md** nos servirá para editar el presente texto en formato Markdown; donde iremos comentando el proceso que hemos seguido.
-> El archivo **.gitignore** es un archivo en el que añadiremos los archivos que no queremos que sean rastreados por Git. En nuestro caso, hemos añadido el archivo en formato PDF de la Práctica 3, ya que no tiene relevancia en el código.
+> El archivo **README.md** nos servirá para editar el presente texto en formato Markdown; donde iremos comentando el proceso que hemos seguido. <br />
+> El archivo **.gitignore** es un archivo en el que añadiremos los nombres de los archivos que no queremos que sean rastreados por Git. En nuestro caso, hemos añadido el archivo en formato PDF de la Práctica 3, ya que no tiene relevancia en el código.
 
 El siguiente paso es iniciar el repositorio remoto. Para llevar a cabo este paso nos dirigimos a la página web de [GitHub](https://github.com) y creamos un nuevo repositorio, el cual hemos llamado 'ed_practica3' ya que contendrá el código de la Práctica 3.
 
