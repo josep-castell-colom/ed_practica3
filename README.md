@@ -242,3 +242,14 @@ git merge dev
 En el caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
 
 Éste es un buen momento para [añadir una nueva etiqueta de versionado](#etiquetas-tag) ya que fusionamos una nueva versión estable.
+
+## Continuación de la práctica
+
+A continuación no veremos más comandos nuevos, mas seguiremos comentando los cambios que hemos llevado a cabo para cumplir con los objetivos de la práctica.
+
+Lo primero que hemos hecho ha sido usar la rama _dev_ para actualizar los comentarios al formato JavaDoc. Una vez ha estado listo hemos fusionada la rama _main_ con la rama _dev_ y le hemos dado la etiqueta de versión 1.0.1, pues no incluía ninguna funcionalidad nueva.
+
+En segundo lugar, hemos eliminado directamente la interfaz Sonido de la rama _main_ y hemos corregido los errores que ésto nos ha generado.
+Una vez corregidos los errores y teniendo una versión estable, hemos realizado el _commit_ y el _push_ y le hemos asignado la etiqueta de versión 2.0.0, pues el cambio que hemos realizado no era compatible con la anterior versión.
+
+Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y hemos añadido de nuevo la interfaz Sonido.
