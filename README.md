@@ -141,7 +141,7 @@ Las etiquetas hacen referencia a un _commit_ en concreto por lo que si ejecutamo
 Si necesitamos añadir una etiqueta a un _commit_ anterior tendremos que buscar su _hash_ con el comando visto anteriormente [`git log`](#log) e incluirlo después del nombre de la versión:
 
 ```
-git tag -a v1.0 <commit_hash> -m '<mensaje_explicativo>
+git tag -a v1.0 <commit_hash> -m '<mensaje_explicativo>'
 ```
 
 Las etiquetas necesitan un comando especial para ser actualizadas en el repositorio remoto. Lo veremos en el siguiente capítulo. ¹
@@ -216,7 +216,7 @@ git checkout <rama>
 
 En este momento los cambios que efectuemos en nuestro código quedaran registrados en la nueva rama, sin modificar la rama principal (_main_).
 
-Cabe señalar que con lo anterior hemos creado la rama en nuestro repositorio local pero todavía no está incluido en el repositorio remoto. Para ello debemos hacer un:
+Cabe señalar que con lo anterior hemos creado la rama en nuestro repositorio local pero todavía no está incluida en el repositorio remoto. Para ello debemos hacer un:
 
 ```
 git push -u origin <rama>
@@ -235,3 +235,5 @@ git merge dev
 ```
 
 En el caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
+
+Éste es un buen momento para [añadir una nueva etiqueta de versionado](#etiquetas-tag) ya que fusionamos una nueva versión estable.
