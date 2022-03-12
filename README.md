@@ -2,6 +2,8 @@
 
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para manejar un control de versiones.</p>
 
+## Inicializar repositorio y subir los archivos
+
 - Para empezar debemos inicializar un nuevo repositorio en nuestra carpeta local dónde se encuentra la Práctica 3.
   Para ello nos situamos en el directorio mencionado y usamos el comando:
 
@@ -42,7 +44,7 @@ Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 
 2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
 
-3. La tercera fase es la fase de _commit_. Después de hacer _commit_ el comando _git status_ no mostrará los archivos, sinó que nos informará que nuestro árbol de trabajo está actualizado.
+3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando _git status_ no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
 
 - Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
 
