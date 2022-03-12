@@ -3,6 +3,7 @@
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para manejar un control de versiones.</p>
 
 #### Inicializar repositorio y subir archivos
+
 - [Inicializar repositorio](#inicializar-repositorio)
 - [_Untracked_, _staged_ y _commit_](#untracked-staged-y-commit)
 - [Etiquetas (_tag_)](#etiquetas-tag)
@@ -10,21 +11,24 @@
 - [_Pull_](#pull)
 
 #### Nuevas ramas y actualizaciones
+
 - [_Branch_](#branch)
 - [_Checkout_](#checkout)
+- [_Merge_](#merge)
 
 ## Inicializar repositorio y subir archivos
+
 ### Inicializar repositorio
 
 Para empezar debemos inicializar un nuevo repositorio en nuestra carpeta local dónde se encuentra la Práctica 3.
-  Para ello nos situamos en el directorio mencionado y usamos el comando:
+Para ello nos situamos en el directorio mencionado y usamos el comando:
 
 ```
 git init
 ```
 
 A continuación podemos añadir los archivos **README.md** y **.gitignore**.
-  Creamos los archivos dentro del directorio usando, por ejemplo:
+Creamos los archivos dentro del directorio usando, por ejemplo:
 
 ```
 touch README.md
@@ -45,6 +49,7 @@ git remote add origin https://github.com/josep-castell-colom/ed_practica3.git
 Ahora que tenemos vinculado nuestro repositorio local con el repositorio remoto ya estamos listos para subir los archivos.
 
 ### _Untracked_, _staged_ y _commit_
+
 En este punto es interesante conocer los tres estadios por los que pasarán nuestros archivos antes de ser subidos al repositorio remoto. Podemos ir comprobando el estado de los archivos con el comando:
 
 ```
@@ -60,6 +65,7 @@ Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará de que nuestro árbol de trabajo está actualizado.
 
 #### _Staged_ (`git add`)
+
 Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
 
 ```
@@ -123,7 +129,8 @@ git log --pretty=oneline
 
 ### Etiquetas (_tag_)
 
-Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_). 
+Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_). Preferiblemente utilizaremos el formato [Versionado Semántico 2.0.0](https://semver.org/lang/es/).
+
 Es bueno conocer que hay dos tipos de etiquetas: la etiqueta ligera (_lightweight_) y la etiqueta anotada (_annotated_). La primera nos permite crear una etiqueta rápida, simplemente incluyendo su nombre:
 
 ```
@@ -157,18 +164,18 @@ git push -u origin main
 En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
 La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
 
-> ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
-> 
+> ¹ Como hemos mencionado en el capítulo anterior, las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` por defecto no se incluyen. Para ello debemos introducir
+>
 > ```
 > git push origin <nombre_etiqueta>
 > ```
-> 
+>
 > para incluir una etiqueta en concreto o
-> 
+>
 > ```
 > git push origin --tags
 > ```
-> 
+>
 > para incluir todas las etiquetas creadas localmente.
 
 ### Pull
@@ -228,7 +235,7 @@ Si queremos actualizar nuestra rama en el repositorio remoto debemos repetir los
 
 Al tener una nueva versión estable en la rama de desarrollo es hora de fusionarla con la rama principal.
 
-Para llevar esto a cabo debemos situarnos en la rama principal (usado `git checkout main`) y desde esta rama llamar al comando: 
+Para llevar esto a cabo debemos situarnos en la rama principal (usado `git checkout main`) y desde esta rama llamar al comando:
 
 ```
 git merge dev
