@@ -28,4 +28,32 @@ El archivo <b>.gitignore</b> es un archivo en el que añadiremos los archivos qu
 git remote add origin https://github.com/josep-castell-colom/ed_practica3.git
 ```
 
-- Ahora que tenemos vinculado nuestro repositorio local con el repositorio remoto ya estamos listos para subir los archivos.
+Ahora que tenemos vinculado nuestro repositorio local con el repositorio remoto ya estamos listos para subir los archivos.
+
+En este punto es interesante conocer los tres estadios por los que pasarán nuestros archivos antes de ser subidos al repositorio remoto. Podemos ir comprobando el estado de los archivos con el comando:
+
+```
+git status
+```
+
+Usando este comando podemos ver en que estado se encuentran nuestros archivos:
+
+1. En primer lugar, los archivos que hayan sido modificados se mostraran de color rojo en el apartado de archivos sin seguimiento(_untracked_).
+
+2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
+
+3. La tercera fase es la fase de _commit_. Después de hacer _commit_ el comando _git status_ no mostrará los archivos, sinó que nos informará que nuestro árbol de trabajo está actualizado.
+
+- Para subir nuestros archivos, primeramente debemos añadirlos al índice, es decir, incluirlos en el área de _stage_. Esto lo logramos con el comando:
+
+```
+git add .
+```
+
+Aquí el punto (.) simboliza todos los archivos del directorio (sin incluir los que hemos añadido a _.gitignore_). También podríamos añadir archivos en concreto cambiando el punto por el nombre del archivo; en ese caso el comando sería, por ejemplo:
+
+```
+git add Persona.java
+```
+
+Ahora que tenemos los archivos en _stage_ podemos hacer el primer **commit**.
