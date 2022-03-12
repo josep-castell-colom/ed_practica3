@@ -154,22 +154,20 @@ Una vez hecho el _commit_ y añadida la etiqueta ya sólo nos falta subir los ar
 git push -u origin main
 ```
 
-> En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
-> La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
+En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
+La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
 
----
-
-¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
-
-```
-git push origin <nombre_etiqueta>
-```
-
-para incluir una etiqueta en concreto o
-
-```
-git push origin --tags
-```
+> ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
+> 
+> ```
+> git push origin <nombre_etiqueta>
+> ```
+> 
+> para incluir una etiqueta en concreto o
+> 
+> ```
+> git push origin --tags
+> ```
 
 para incluir todas las etiquetas creadas localmente.
 
@@ -218,10 +216,22 @@ git checkout <rama>
 
 En este momento los cambios que efectuemos en nuestro código quedaran registrados en la nueva rama, sin modificar la rama principal (_main_).
 
-Cabe señalar con lo anterior hemos creado la rama en nuestro repositorio local pero todavía no está incluido en el repositorio remoto. Para ello debemos hacer un:
+Cabe señalar que con lo anterior hemos creado la rama en nuestro repositorio local pero todavía no está incluido en el repositorio remoto. Para ello debemos hacer un:
 
 ```
 git push -u origin <rama>
 ```
 
 Si queremos actualizar nuestra rama en el repositorio remoto debemos repetir los pasos [_stage_ y _commit_](#untracked-staged-y-commit) después de haber realizado los cambios pertinentes.
+
+### _Merge_
+
+Al tener una nueva versión estable en la rama de desarrollo es hora de fusionarla con la rama principal.
+
+Para llevar esto a cabo debemos situarnos en la rama principal (usado `git checkout main`) y desde esta rama llamar al comando: 
+
+```
+git merge dev
+```
+
+En el caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
