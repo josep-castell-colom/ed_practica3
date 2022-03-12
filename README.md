@@ -144,7 +144,7 @@ Si necesitamos añadir una etiqueta a un _commit_ anterior tendremos que buscar 
 git tag -a v1.0 <commit_hash> -m '<mensaje_explicativo>
 ```
 
-> Las etiquetas necesitan un comando especial para ser actualizadas en el repositorio remoto. Lo veremos en el siguiente capítulo. [¹]
+Las etiquetas necesitan un comando especial para ser actualizadas en el repositorio remoto. Lo veremos en el siguiente capítulo. [¹]
 
 ### _Push_
 
@@ -156,6 +156,8 @@ git push -u origin main
 
 > En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
 > La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
+
+---
 
 [¹] Como hemos mencionado anteriormente las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
 
