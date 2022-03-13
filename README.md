@@ -2,6 +2,10 @@
 
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para manejar un control de versiones.</p>
 
+---
+
+## Índice
+
 #### [Inicializar repositorio y subir archivos](#inicializar-repositorio-y-subir-archivos)
 
 - [Inicializar repositorio](#inicializar-repositorio)
@@ -18,6 +22,8 @@
 - [_Merge_](#merge)
 
 #### [Continuación de la práctica](#continuación-de-la-práctica)
+
+---
 
 ## Inicializar repositorio y subir archivos
 
