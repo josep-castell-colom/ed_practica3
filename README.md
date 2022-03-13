@@ -160,7 +160,7 @@ Si necesitamos añadir una etiqueta a un _commit_ anterior tendremos que buscar 
 git tag -a v1.0 <commit_hash> -m '<mensaje_explicativo>'
 ```
 
-Las etiquetas necesitan un comando especial para ser actualizadas en el repositorio remoto. Lo veremos en el siguiente capítulo. ¹
+Las etiquetas necesitan un comando adicional para ser actualizadas en el repositorio remoto. Lo veremos en el siguiente capítulo. ¹
 
 ### _Push_
 
