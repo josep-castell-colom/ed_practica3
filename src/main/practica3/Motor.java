@@ -1,6 +1,6 @@
-package Practica3.Practica3;
+package practica3;
 
-import Practica3.Sonido.Sonido;
+import sonido.Sonido;
 
 /**
  * Un motor es una pieza indispensable para la clase Barco.

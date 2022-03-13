@@ -1,4 +1,4 @@
-package Practica3.Practica3;
+package practica3;
 
 /**
  * La clase Adulto extiende la clase Persona.

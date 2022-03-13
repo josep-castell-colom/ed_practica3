@@ -1,6 +1,6 @@
-package Practica3.Practica3;
+package practica3;
 
-import Practica3.Sonido.Sonido;
+import sonido.Sonido;
 
 /**
  * Clase Mascota, de la que parten Perro y Gato e implementa la interfaz Sonido.

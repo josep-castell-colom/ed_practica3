@@ -282,3 +282,5 @@ Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y 
 Una vez más, al finalizar las modificaciones, le hemos dado la etiqueta de v.2.1.0; pues tiene una nueva funcionalidad pero no es incompatible con la anterior versión 2.0.0.
 
 El siguiente paso ha sido, continuando en la rama _deployment_, hemos refactorizado el código moviendo la interfaz Sonido a un nuevo paquete.
+En este punto hemos aprovechado para reorganizar la estructura de directorios siguiendo (en cierta medida) el estándar [Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
+Hemos incrementado la versión a 3.0.0 y hemos fusionado la rama _main_ con _deployment_.

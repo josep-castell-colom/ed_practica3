@@ -1,4 +1,4 @@
-package Practica3.Practica3;
+package practica3;
 
 /**
  * Persona es una clase abstracta que será extendida por Adulto y Niño

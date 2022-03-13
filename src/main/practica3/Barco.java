@@ -1,4 +1,4 @@
-package Practica3.Practica3;
+package practica3;
 import java.sql.Date;
 
 /**
