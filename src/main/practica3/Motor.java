@@ -4,7 +4,9 @@ import sonido.Sonido;
 
 /**
  * Un motor es una pieza indispensable para la clase Barco.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public class Motor implements Sonido {
   private String fabricante;
   private String potencia;

@@ -2,7 +2,9 @@ package practica3;
 
 /**
  * La clase Gato es hija de la clase Mascota.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public class Gato extends Mascota{
     private String raza;
     

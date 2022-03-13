@@ -284,3 +284,5 @@ Una vez más, al finalizar las modificaciones, le hemos dado la etiqueta de v.2.
 El siguiente paso ha sido, continuando en la rama _deployment_, hemos refactorizado el código moviendo la interfaz Sonido a un nuevo paquete.
 En este punto hemos aprovechado para reorganizar la estructura de directorios siguiendo (en cierta medida) el estándar [Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
 Hemos incrementado la versión a 3.0.0 y hemos fusionado la rama _main_ con _deployment_.
+
+Para finalizar, hemos añadido algunos comentarios de los autores y otras pequeñas ediciones de comentarios, por lo que le hemos dado la versión 3.0.1.

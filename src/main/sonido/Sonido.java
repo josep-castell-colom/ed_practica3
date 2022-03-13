@@ -2,7 +2,9 @@ package sonido;
 
 /**
  * Interfaz sonido a ser implementada por Motor y Mascota.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public interface Sonido {
 
   /**

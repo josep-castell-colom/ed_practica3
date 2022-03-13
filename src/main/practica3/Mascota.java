@@ -4,7 +4,9 @@ import sonido.Sonido;
 
 /**
  * Clase Mascota, de la que parten Perro y Gato e implementa la interfaz Sonido.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public abstract class Mascota implements Sonido {
     private String nombre;
     private int edad;

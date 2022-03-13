@@ -1,6 +1,10 @@
 package practica3;
 
-// Creamos la clase Perro, subclase de Mascota
+/**
+ * La clase Perro extiende la clase Mascota.
+ * @author Josep Castell, Agustín Tudurí
+ */
+
 public class Perro extends Mascota{
   private String raza;
   

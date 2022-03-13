@@ -2,7 +2,9 @@ package practica3;
 
 /**
  * Un juguete podrá o no ser atributo de la clase Niño.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public class Juguete {
   private String nombre;
   private int precio;

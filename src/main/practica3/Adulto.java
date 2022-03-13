@@ -2,7 +2,9 @@ package practica3;
 
 /**
  * La clase Adulto extiende la clase Persona.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public class Adulto extends Persona {
   private String NSS;
   private String direccion;

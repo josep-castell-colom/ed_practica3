@@ -3,7 +3,9 @@ import java.sql.Date;
 
 /**
  * La clase Barco implementa la interfaz Sonido y necesita un objeto de tipo Motor.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public class Barco {
   private String nombre;
   private Date fechaConstruccion;

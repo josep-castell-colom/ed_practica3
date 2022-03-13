@@ -2,7 +2,9 @@ package practica3;
 
 /**
  * Clase Niño, hereda de la clase Persona.
+ * @author Josep Castell, Agustín Tudurí
  */
+
 public class Niño extends Persona {
   private String colegio;
   private Juguete juguete;
