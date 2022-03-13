@@ -1,4 +1,4 @@
-package Practica3;
+package Practica3.Sonido;
 
 /**
  * Interfaz sonido a ser implementada por Motor y Mascota.

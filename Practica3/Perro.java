@@ -1,4 +1,4 @@
-package Practica3;
+package Practica3.Practica3;
 
 // Creamos la clase Perro, subclase de Mascota
 public class Perro extends Mascota{

@@ -1,4 +1,4 @@
-package Practica3;
+package Practica3.Practica3;
 
 /**
  * Un juguete podrá o no ser atributo de la clase Niño.
