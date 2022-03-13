@@ -211,6 +211,20 @@ Si a este comando le añadimos una cadena de caracteres creará una nueva rama c
 git branch dev
 ```
 
+#### Eliminar rama
+
+Si en un futuro lo deseamos, podemos eliminar las ramas. Con la opción `-d` del comando `git branch` podemos eliminar las ramas de nuestro repositorio local; pero no serán eliminadas del repositorio remoto.
+
+```
+git branch -d <branch>
+```
+
+Si también queremos eliminar la rama del repositorio remoto no usaremos `git branch` sinó `git push` con la opción `--delete`; indicando el repositorio remoto y la rama a eliminar.
+
+```
+git push origin --delete <branch>
+```
+
 ### _Checkout_
 
 Una vez creada usaremos el siguiente comando para movernos entre las diferentes ramas:
