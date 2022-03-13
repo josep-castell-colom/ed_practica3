@@ -6,7 +6,7 @@
 
 ## Índice
 
-#### [Inicializar repositorio y subir archivos](##inicializar-repositorio-y-subir-archivos)
+[__Inicializar repositorio y subir archivos__](#inicializar-repositorio-y-subir-archivos)
 
 - [Inicializar repositorio](#inicializar-repositorio)
 - [_Untracked_](#untracked-staged-y-commit), [_staged_](#staged-git-add) y [_commit_](#commit)
@@ -15,14 +15,14 @@
 - [_Push_](#push)
 - [_Pull_](#pull)
 
-#### [Nuevas ramas y actualizaciones](##nuevas-ramas-y-actualizaciones)
+[__Nuevas ramas y actualizaciones__](#nuevas-ramas-y-actualizaciones)
 
 - [_Branch_](#branch)
 - [Eliminar rama](#eliminar-rama)
 - [_Checkout_](#checkout)
 - [_Merge_](#merge)
 
-#### [Continuación de la práctica](##continuación-de-la-práctica)
+[__Continuación de la práctica__](#continuación-de-la-práctica)
 
 ---
 
