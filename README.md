@@ -66,7 +66,7 @@ En este punto es interesante conocer los tres estadios por los que pasarán nues
 git status
 ```
 
-Usando este comando podemos ver en que estado se encuentran nuestros archivos:
+Usando este comando podemos ver en qué estado se encuentran nuestros archivos:
 
 1. En primer lugar, los archivos que hayan sido modificados se mostraran de color rojo en el apartado de archivos sin seguimiento(_untracked_).
 
@@ -264,9 +264,17 @@ Para llevar esto a cabo debemos situarnos en la rama principal (usado `git check
 git merge dev
 ```
 
-En el caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
+En caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
 
 Éste es un buen momento para [añadir una nueva etiqueta de versionado](#etiquetas-tag) ya que fusionamos una nueva versión estable.
+Es interesante saber que es posible fusionar una rama con una versión en concreto. Para conseguirlo, simplemente nos situamos en la rama que deseamos que sea modificada (al igual que en el ejemplo anterior) y usamos el mismo comando seguido del nombre de la etiqueta:
+
+```
+git merge <nombre_etiqueta>
+```
+
+En cualquier caso, después del _merge_ debemos incluir los archivos nuevos con `git add .`, hacer _commit_ y _push_.
+También recordar que para [actualizar la etiqueta en el repositorio](#push) remoto debemos ejecutar `git push origin \<nombre_etiqueta\>'.
 
 ## Continuación de la práctica
 
