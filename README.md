@@ -275,7 +275,11 @@ git merge <nombre_etiqueta>
 
 En cualquier caso, después del _merge_ debemos incluir los archivos nuevos con `git add .`, hacer _commit_ y _push_.
 
-> También recordar que para [actualizar la etiqueta en el repositorio](#push) remoto debemos ejecutar `git push origin <nombre_etiqueta>`.
+> También recordar que para [actualizar la etiqueta en el repositorio](#push) remoto debemos ejecutar
+> 
+> ```
+> git push origin <nombre_etiqueta>
+> ```
 
 ## Continuación de la práctica
 
