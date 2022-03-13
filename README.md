@@ -172,7 +172,7 @@ git push -u origin main
 En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
 La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
 
-> ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push` no se incluyen. Para ello debemos introducir
+> ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push`, por defecto, no se incluyen. Para ello debemos introducir
 >
 > ```
 > git push origin <nombre_etiqueta>
