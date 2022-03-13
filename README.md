@@ -72,7 +72,7 @@ Usando este comando podemos ver en que estado se encuentran nuestros archivos:
 
 2. El segundo estado es la fase _stage_. En este punto los archivos se muestran de color verde y están preparados para el commit.
 
-3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará del estado de nuestro árbol de trabajo; si está actualizado, si necesita hacer _push_ o _pull_.
+3. La tercera fase es la fase de _commit_. Después de hacer _commit_, el comando `git status` no mostrará los archivos, sinó que nos informará del estado de nuestro árbol de trabajo respecto al remoto; si está actualizado o no.
 
 #### _Staged_ (`git add`)
 
