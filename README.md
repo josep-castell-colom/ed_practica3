@@ -9,7 +9,8 @@
 #### [Inicializar repositorio y subir archivos](#inicializar-repositorio-y-subir-archivos)
 
 - [Inicializar repositorio](#inicializar-repositorio)
-- [_Untracked_, _staged_ y _commit_](#untracked-staged-y-commit)
+- [_Untracked_](#untracked-staged-y-commit), [_staged_](#staged-git-add) y [_commit_](#commit)
+- [_Log_](#log)
 - [Etiquetas (_tag_)](#etiquetas-tag)
 - [_Push_](#push)
 - [_Pull_](#pull)
