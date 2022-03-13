@@ -1,4 +1,4 @@
-package Practica3;
+package Practica3.Practica3;
 
 /**
  * Clase Niño, hereda de la clase Persona.

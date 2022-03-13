@@ -1,4 +1,4 @@
-package Practica3;
+package Practica3.Practica3;
 
 /**
  * La clase Gato es hija de la clase Mascota.
