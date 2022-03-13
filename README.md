@@ -82,11 +82,11 @@ Para subir nuestros archivos, primeramente debemos añadirlos al índice, es dec
 git add .
 ```
 
-Aquí el punto (.) simboliza todos los archivos del directorio (sin incluir los que hemos añadido a _.gitignore_). También podríamos añadir archivos en concreto cambiando el punto por el nombre del archivo; en ese caso el comando sería, por ejemplo:
-
-```
-git add Persona.java
-```
+> Aquí el punto (.) simboliza todos los archivos del directorio (sin incluir los que hemos añadido a _.gitignore_). También podríamos añadir archivos en concreto cambiando el punto por el nombre del archivo; en ese caso el comando sería, por ejemplo:
+> 
+> ```
+> git add Persona.java
+> ```
 
 Ahora que tenemos los archivos en _stage_ podemos hacer el primer **commit**.
 
@@ -94,7 +94,7 @@ Ahora que tenemos los archivos en _stage_ podemos hacer el primer **commit**.
 
 Cada _commit_ que hacemos es un punto concreto de nuestro proyecto en el que se guarda una especie de instantánea a la que podemos regresar en un futuro, ver los cambios que se llevaron a cabo e incluso saber quién los hizo y por qué.
 
-Para facilitar ésta información es recomendable incluir un pequeño mensaje en cada _commit_ explicando breve y concisamente los cambios que hemos hecho y por qué.
+> Para facilitar ésta información es recomendable incluir un pequeño mensaje en cada _commit_ explicando breve y concisamente los cambios que hemos hecho y por qué.
 
 Para hacer un commit se puede usar el siguiente comando:
 
@@ -110,16 +110,16 @@ También podemos hacer uso de la opción `-m` para atajar el paso del editor. De
 git commit -m '<mensaje_explicativo>'
 ```
 
-Donde \<mensaje explicativo\> sería la descripción, sin incluir los símbolos menor que (<) ni mayor que (>).
+Donde \<mensaje_explicativo\> sería la descripción, sin incluir los símbolos menor que (<) ni mayor que (>).
 
-También es posible realizar los pasos de _stage_ y _commit_ en uno sólo usando la opción `-a` del comando _commit_. De este modo el comando quedaría así:
-
-```
-git commit -a -m '<mensaje_explicativo>'
-```
-
-En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción `-a` añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
-Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir cambios no deseados al proyecto.
+> También es posible realizar los pasos de _stage_ y _commit_ en uno sólo usando la opción `-a` del comando _commit_. De este modo el comando quedaría así:
+> 
+> ```
+> git commit -a -m '<mensaje_explicativo>'
+> ```
+> 
+> En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción `-a` añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
+> Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir cambios no deseados al proyecto.
 
 #### _Log_
 
@@ -129,17 +129,19 @@ Como hemos comentado al inicio de la sección, cada _commit_ realiza una instant
 git log
 ```
 
-Que nos mostrará el _hash_ del _commit_, la etiqueta (si dispone de una), el nombre del autor, la fecha y el mensaje que hemos incluido al realizar el _commit_.
+que nos mostrará el _hash_ del _commit_, la etiqueta (si dispone de una), el nombre del autor, la fecha y el mensaje que hemos incluido al realizar el _commit_.
 
-Si no necesitamos tanta información y queremos ver el historial de forma resumida podemos usar:
-
-```
-git log --pretty=oneline
-```
+> Si no necesitamos tanta información y queremos ver el historial de forma resumida podemos usar uno de los siguientes comandos:
+> 
+> ```
+> git log --oneline
+> ---
+> git log --pretty=oneline
+> ```
 
 ### Etiquetas (_tag_)
 
-Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_).
+Llegados a éste punto ya podemos subir los archivos al repositorio remoto, sin embargo, vamos a realizar un pequeño paso antes y éste es añadir la etiqueta de versionado (_tag_) siguiendo el estándar de [Versionado Semántico 2.0.0](https://semver.org/lang/es/).<br />
 Es bueno conocer que hay dos tipos de etiquetas: la etiqueta ligera (_lightweight_) y la etiqueta anotada (_annotated_). La primera nos permite crear una etiqueta rápida, simplemente incluyendo su nombre:
 
 ```
@@ -153,11 +155,11 @@ La sintaxis para este tipo de etiquetas es:
 git tag -a v1.0 -m 'Versión 1.0 del proyecto'
 ```
 
-Las etiquetas hacen referencia a un _commit_ en concreto por lo que si ejecutamos los dos comandos anteriores se aplicará la etiqueta al _head_, es decir, al _commit_ más reciente; a la cabeza del proyecto.
-Si necesitamos añadir una etiqueta a un _commit_ anterior tendremos que buscar su _hash_ con el comando visto anteriormente [`git log`](#log) e incluirlo después del nombre de la versión:
+Las etiquetas hacen referencia a un _commit_ en concreto por lo que si ejecutamos alguno de los dos comandos anteriores se aplicará la etiqueta al _head_, es decir, al _commit_ más reciente; a la cabeza del proyecto.
+Si necesitamos añadir una etiqueta a un _commit_ anterior tendremos que buscar su _hash_ con el comando visto anteriormente [`git log`](#log) e incluirlo después del comando anterior:
 
 ```
-git tag -a v1.0 <commit_hash> -m '<mensaje_explicativo>'
+git tag -a v1.0 -m '<mensaje_explicativo> <commit_hash>'
 ```
 
 Las etiquetas necesitan un comando adicional para ser actualizadas en el repositorio remoto. Lo veremos en el siguiente capítulo. ¹
@@ -171,15 +173,15 @@ git push -u origin main
 ```
 
 En este comando, _origin_ se refiere al repositorio remoto y _main_ se refiere a la rama local que queremos subir.
-La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio y rama local.
+La opción `-u` nos sirve para añadir el _upstream_ (seguimiento remoto) de cada rama que ha sido subida con éxito. De ésta forma podemos realizar `git push` y `git pull` sin necesidad de añadir cada vez los parámetros de repositorio remoto y rama local.
 
-> ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push`, por defecto, no se incluyen. Para ello debemos introducir
+> ¹ Como hemos mencionado en el capítulo anterior las etiquetas necesitan un comando extra para que queden reflejadas en el repositorio remoto, ya que con `git push`, por defecto, no se incluyen. Para ello debemos introducir:
 >
 > ```
 > git push origin <nombre_etiqueta>
 > ```
 >
-> para incluir una etiqueta en concreto o
+> para incluir una etiqueta en concreto, o:
 >
 > ```
 > git push origin --tags
@@ -195,11 +197,11 @@ Así como `git push` nos sirve para actualizar el repositorio remoto con el repo
 git pull
 ```
 
-Si hemos usado el comando `git push` con la opción `-u`, el comando anterior será suficiente; si no es así, debemos añadir el repositorio remoto:
-
-```
-git pull origin
-```
+> Si hemos usado el comando `git push` con la opción `-u`, el comando anterior será suficiente; si no es así, debemos añadir el repositorio remoto:
+> 
+> ```
+> git pull origin
+> ```
 
 Cabe destacar que la acción _pull_ puede desencadenar conflictos si se han editado las mismas líneas de código. En este caso se nos enseñarán las diferencias y se nos pedirá que elijamos la versión definitiva para que prevalezca sobre la otra.
 
@@ -220,6 +222,12 @@ Si a este comando le añadimos una cadena de caracteres creará una nueva rama c
 
 ```
 git branch dev
+```
+
+Cabe señalar que con lo anterior hemos creado la rama en nuestro repositorio local pero todavía no está incluida en el repositorio remoto. Para ello debemos introducir el comando:
+
+```
+git push -u origin <rama>
 ```
 
 #### Eliminar rama
@@ -246,12 +254,6 @@ git checkout <rama>
 
 En este momento los cambios que efectuemos en nuestro código quedaran registrados en la nueva rama, sin modificar la rama principal (_main_).
 
-Cabe señalar que con lo anterior hemos creado la rama en nuestro repositorio local pero todavía no está incluida en el repositorio remoto. Para ello debemos hacer un:
-
-```
-git push -u origin <rama>
-```
-
 Si queremos actualizar nuestra rama en el repositorio remoto debemos repetir los pasos [_stage_ y _commit_](#untracked-staged-y-commit) después de haber realizado los cambios pertinentes.
 
 ### _Merge_
@@ -264,9 +266,9 @@ Para llevar esto a cabo debemos situarnos en la rama principal (usado `git check
 git merge dev
 ```
 
-En caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
+> En caso de que dispusiéramos de múltiples ramas y debamos fusionar la rama de desarrollo con una rama diferente a la principal, simplemente nos situaremos en la rama que deba recibir los cambios y desde allí haremos el _merge_ con la rama de desarrollo.
 
-Éste es un buen momento para [añadir una nueva etiqueta de versionado](#etiquetas-tag) ya que fusionamos una nueva versión estable.
+Éste es un buen momento para [añadir una nueva etiqueta de versionado](#etiquetas-tag) ya que fusionamos una nueva versión estable.<br />
 Es interesante saber que es posible fusionar una rama con una versión en concreto. Para conseguirlo, simplemente nos situamos en la rama que deseamos que sea modificada (al igual que en el ejemplo anterior) y usamos el mismo comando seguido del nombre de la etiqueta:
 
 ```
