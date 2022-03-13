@@ -280,3 +280,5 @@ Una vez corregidos los errores y teniendo una versión estable, hemos realizado 
 Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y hemos añadido de nuevo la interfaz Sonido. Hemos implementado el método sonido en las clases Motor y Mascota y, por herencia, en las clases Gato y Perro.
 
 Una vez más, al finalizar las modificaciones, le hemos dado la etiqueta de v.2.1.0; pues tiene una nueva funcionalidad pero no es incompatible con la anterior versión 2.0.0.
+
+El siguiente paso ha sido, continuando en la rama _deployment_, hemos refactorizado el código moviendo la interfaz Sonido a un nuevo paquete.
