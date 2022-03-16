@@ -307,7 +307,7 @@ Debido a que en GitHub/Insights/Network sólo se muestran los últimos _commits_
 git log --graph --pretty=oneline
 ```
 
-![Captura del historial de commits](git-log-graph-pretty.png)
+![Captura del historial de commits](git_log_graph_pretty.png)
 
 En el historial podemos ver todo el proceso, desde el _commit_ inicial, las diferentes ramas con sus _commits_ y el punto
 en el que se fusionan con la rama principal.
