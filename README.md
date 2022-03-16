@@ -1,5 +1,9 @@
 # **PRÁCTICA 4 - ENTORNOS DE DESARROLLO**
 
+## Realizada por Josep Castell y Agustín Tudurí
+
+---
+
 <p style="font-size:14pt;font-weight:lighter">La Práctica 4 consiste en añadir la Práctica 3 a un nuevo repositorio en GitHub y aplicarle una serie de refactorizaciones, de forma que aprendamos a usar los diferentes comandos de Git para llevar a cabo un correcto control de versiones.</p>
 
 ---
