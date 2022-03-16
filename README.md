@@ -289,18 +289,15 @@ De ahora en adelante no veremos más comandos nuevos, sin embargo, seguiremos co
 
 Lo primero que hemos hecho ha sido usar la rama _dev_ para actualizar los comentarios al formato JavaDoc. Una vez ha estado listo hemos fusionado la rama _main_ con la rama _dev_ y le hemos dado la etiqueta de versión 1.0.1, pues no incluía ninguna funcionalidad nueva.
 
-En segundo lugar, hemos eliminado directamente la interfaz Sonido de la rama _main_ y hemos corregido los errores que ésto nos ha generado.
+En segundo lugar, hemos eliminado la interfaz `Sonido` directamente de la rama _main_ y hemos eliminado los métodos `sonido()` de las clases donde estaba implementado.
 Una vez corregidos los errores y teniendo una versión estable, hemos realizado el _commit_ y el _push_ y le hemos asignado la etiqueta de versión 2.0.0, pues el cambio que hemos realizado no era compatible con la anterior versión.
 
-Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y hemos añadido de nuevo la interfaz Sonido. Hemos implementado el método sonido en las clases Motor y Mascota y, por herencia, en las clases Gato y Perro.
-
+Lo siguiente ha sido crear una nueva rama a la que hemos llamado _deployment_ y hemos añadido de nuevo la interfaz Sonido. Hemos implementado el método sonido en las clases Motor y Mascota y, por herencia, en las clases Gato y Perro.  
 Una vez más, al finalizar las modificaciones, le hemos dado la etiqueta de v.2.1.0; pues tiene una nueva funcionalidad pero no es incompatible con la anterior versión 2.0.0.
 
 El siguiente paso ha sido, continuando en la rama _deployment_, hemos refactorizado el código moviendo la interfaz Sonido a un nuevo paquete.
-En este punto hemos aprovechado para reorganizar la estructura de directorios siguiendo (en cierta medida) el estándar [Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
-Hemos incrementado la versión a 3.0.0 y hemos fusionado la rama _main_ con _deployment_.
-
-Para finalizar, hemos añadido algunos comentarios de los autores y otras pequeñas ediciones de comentarios, por lo que le hemos dado la versión 3.0.1.
+Seguidamente, hemos aprovechado para reorganizar la estructura de directorios siguiendo (en cierta medida) el estándar [Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
+Debido a que estas dos últimas refactorizaciones no influyen en el funcionamiento les hemos asignado las versiones 2.1.1 y  2.1.2 respectivamente.
 
 ## Resumen y comando extra
 
@@ -310,14 +307,14 @@ Debido a que en GitHub/Insights/Network sólo se muestran los últimos _commits_
 git log --graph --pretty=oneline
 ```
 
-![Captura del historial de commits](git_log_graph_pretty.png)
+![Captura del historial de commits](git-log-graph-pretty.png)
 
 En el historial podemos ver todo el proceso, desde el _commit_ inicial, las diferentes ramas con sus _commits_ y el punto
 en el que se fusionan con la rama principal.
 
-- Para empezar, se ha hecho el commit inicial con la etiqueta de versión 1.0.0 y se han realizado varios _commits_ en la rama principal.
+- Para empezar, se ha hecho el commit inicial con la etiqueta de versión 1.0.0 y se han realizado varios _commits_ en la rama principal sin influir en el código del programa.
 - Después se ha creado la rama `dev`(color lila) donde se ha implementado el formato JavaDoc, y se ha unido a la rama principal con la etiqueta v.1.0.1.
 - Seguidamente, en la rama principal se ha eliminado la interfaz `Sonido` y se le ha dado la versión 2.0.0.
 - El siguiente paso ha sido añadir de nuevo la interfaz, directamente en la rama principal, e implementar el método `sonido()` en las clases correspondientes. A ésta versión se la ha etiquetado como 2.1.0.
-- A continuación, se ha creado la rama `deployment` (color naranja) dónde se ha movido la interfaz `Sonido` a un nuevo paquete (esta versión es la 3.0.0) y se ha añadido a la rama principal.
-- Por último se han hecho unas pequeñas modificaciones de comentarios directamente en la rama principal (v3.0.1).
+- A continuación, se ha creado la rama `deployment` (color naranja) dónde se ha movido la interfaz `Sonido` a un nuevo paquete (esta versión es la 2.1.1) y se ha añadido a la rama principal.
+- Por último se ha modificado la estructura de directorios directamente en la rama principal (v.2.1.2).
