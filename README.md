@@ -6,7 +6,7 @@
 
 ## Índice
 
-[__Inicializar repositorio y subir archivos__](#inicializar-repositorio-y-subir-archivos)
+[**Inicializar repositorio y subir archivos**](#inicializar-repositorio-y-subir-archivos)
 
 - [Inicializar repositorio](#inicializar-repositorio)
 - [_Untracked_](#untracked-staged-y-commit), [_staged_](#staged-git-add) y [_commit_](#commit)
@@ -15,14 +15,14 @@
 - [_Push_](#push)
 - [_Pull_](#pull)
 
-[__Nuevas ramas y actualizaciones__](#nuevas-ramas-y-actualizaciones)
+[**Nuevas ramas y actualizaciones**](#nuevas-ramas-y-actualizaciones)
 
 - [_Branch_](#branch)
 - [Eliminar rama](#eliminar-rama)
 - [_Checkout_](#checkout)
 - [_Merge_](#merge)
 
-[__Continuación de la práctica__](#continuación-de-la-práctica)
+[**Continuación de la práctica**](#continuación-de-la-práctica)
 
 ---
 
@@ -83,7 +83,7 @@ git add .
 ```
 
 > Aquí el punto (.) simboliza todos los archivos del directorio (sin incluir los que hemos añadido a _.gitignore_). También podríamos añadir archivos en concreto cambiando el punto por el nombre del archivo; en ese caso el comando sería, por ejemplo:
-> 
+>
 > ```
 > git add Persona.java
 > ```
@@ -113,11 +113,11 @@ git commit -m '<mensaje_explicativo>'
 Donde \<mensaje_explicativo\> sería la descripción, sin incluir los símbolos menor que (<) ni mayor que (>).
 
 > También es posible realizar los pasos de _stage_ y _commit_ en uno sólo usando la opción `-a` del comando _commit_. De este modo el comando quedaría así:
-> 
+>
 > ```
 > git commit -a -m '<mensaje_explicativo>'
 > ```
-> 
+>
 > En este caso sólo se incluirían los archivos modificados o suprimidos, pero no los nuevos, es decir, la opción `-a` añade al _commit_ los archivos que ya estan siendo seguidos por Git, pero no los recién agregados.
 > Aunque esta opción existe, no es muy recomendable ya que es más fácil añadir cambios no deseados al proyecto.
 
@@ -132,7 +132,7 @@ git log
 que nos mostrará el _hash_ del _commit_, la etiqueta (si dispone de una), el nombre del autor, la fecha y el mensaje que hemos incluido al realizar el _commit_.
 
 > Si no necesitamos tanta información y queremos ver el historial de forma resumida podemos usar uno de los siguientes comandos:
-> 
+>
 > ```
 > git log --oneline
 > ---
@@ -198,7 +198,7 @@ git pull
 ```
 
 > Si hemos usado el comando `git push` con la opción `-u`, el comando anterior será suficiente; si no es así, debemos añadir el repositorio remoto:
-> 
+>
 > ```
 > git pull origin
 > ```
@@ -278,7 +278,7 @@ git merge <nombre_etiqueta>
 En cualquier caso, después del _merge_ debemos incluir los archivos nuevos con `git add .`, hacer _commit_ y _push_.
 
 > También recordar que para [actualizar la etiqueta en el repositorio](#push) remoto debemos ejecutar
-> 
+>
 > ```
 > git push origin <nombre_etiqueta>
 > ```
@@ -301,3 +301,23 @@ En este punto hemos aprovechado para reorganizar la estructura de directorios si
 Hemos incrementado la versión a 3.0.0 y hemos fusionado la rama _main_ con _deployment_.
 
 Para finalizar, hemos añadido algunos comentarios de los autores y otras pequeñas ediciones de comentarios, por lo que le hemos dado la versión 3.0.1.
+
+## Resumen y comando extra
+
+Debido a que en GitHub/Insights/Network sólo se muestran los últimos _commits_ no es posible visualizar todo el árbol del proyecto con las distintas ramas creadas, por lo que se adjunta a continuación una captura del historial de Git; que se consigue combinando dos opciones del comando `git log`. La opción `--graph` nos muestra el historial de _commits_ al cual se añade, a su izquierda, el árbol con sus distintas ramas. Si a ésto le añadimos la opción `--pretty=oneline` conseguimos ver el historial en formato reducido. Por lo que el comando queda de la siguiente forma:
+
+```
+git log --graph --pretty=oneline
+```
+
+![Captura del historial de commits](git_log_graph_pretty.png)
+
+En el historial podemos ver todo el proceso, desde el _commit_ inicial, las diferentes ramas con sus _commits_ y el punto
+en el que se fusionan con la rama principal.
+
+- Para empezar, se ha hecho el commit inicial con la etiqueta de versión 1.0.0 y se han realizado varios _commits_ en la rama principal.
+- Después se ha creado la rama `dev`(color lila) donde se ha implementado el formato JavaDoc, y se ha unido a la rama principal con la etiqueta v.1.0.1.
+- Seguidamente, en la rama principal se ha eliminado la interfaz `Sonido` y se le ha dado la versión 2.0.0.
+- El siguiente paso ha sido añadir de nuevo la interfaz, directamente en la rama principal, e implementar el método `sonido()` en las clases correspondientes. A ésta versión se la ha etiquetado como 2.1.0.
+- A continuación, se ha creado la rama `deployment` (color naranja) dónde se ha movido la interfaz `Sonido` a un nuevo paquete (esta versión es la 3.0.0) y se ha añadido a la rama principal.
+- Por último se han hecho unas pequeñas modificaciones de comentarios directamente en la rama principal (v3.0.1).
