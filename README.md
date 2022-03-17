@@ -301,7 +301,7 @@ Una vez más, al finalizar las modificaciones, le hemos dado la etiqueta de v.2.
 
 El siguiente paso ha sido, continuando en la rama _deployment_, hemos refactorizado el código moviendo la interfaz Sonido a un nuevo paquete.
 Seguidamente, hemos aprovechado para reorganizar la estructura de directorios siguiendo (en cierta medida) el estándar [Maven](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
-Debido a que estas dos últimas refactorizaciones no influyen en el funcionamiento les hemos asignado las versiones 2.1.1 y  2.1.2 respectivamente.
+Debido a que estas dos últimas refactorizaciones no influyen en el funcionamiento les hemos asignado las versiones 2.1.1 y 2.1.2 respectivamente.
 
 ## Resumen y comando extra
 
@@ -322,3 +322,7 @@ en el que se fusionan con la rama principal.
 - El siguiente paso ha sido añadir de nuevo la interfaz, directamente en la rama principal, e implementar el método `sonido()` en las clases correspondientes. A ésta versión se la ha etiquetado como 2.1.0.
 - A continuación, se ha creado la rama `deployment` (color naranja) dónde se ha movido la interfaz `Sonido` a un nuevo paquete (esta versión es la 2.1.1) y se ha añadido a la rama principal.
 - Por último se ha modificado la estructura de directorios directamente en la rama principal (v.2.1.2).
+
+Para una mejor visualización del proceso se incluye a continuación una versión simplificada del árbol de trabajo mostrando únicamente las diferentes ramas y los cambios de versión del proyecto:
+
+<img src="git-flow.png" alt="Esquema simplificado del árbol de trabajo" style="border-radius:10px;padding:10px;box-sizing:border-box;background-color:white;margin-top:10px">
